@@ -15,7 +15,7 @@ Installation setup is as follows:
   * npm install express
   * npm install body-parser
   * npm install cors
-  * node starter.js
+  * node server.js
 - In your browser (Google Chrome was tested only) go to: localhost:8000
 - The interaction with the page should be more intuitive:
   * Type a U.S. zip code
