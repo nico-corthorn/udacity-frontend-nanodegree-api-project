@@ -7,6 +7,7 @@ let newDate = new Date().toLocaleString();
 
 // Personal API Key for OpenWeatherMap API
 const key = "94ee77c0550108be955d64acd45a4f65"
+const units = "&units=imperial"
 //api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}&appid={API key}
 const baseURL = "http://api.openweathermap.org/data/2.5/weather?zip="
 /* Possible responses:
@@ -36,7 +37,7 @@ document.getElementById("generate").addEventListener('click',  generate);
 /* Function to GET Web API Data*/
 const getWeather = async (zipCode, countryCode)=>{
 
-	const url = baseURL+zipCode+","+countryCode+"&appid="+key;
+	const url = baseURL+zipCode+","+countryCode+"&appid="+key+units;
 	const res = await fetch(url)
 	try {
 		const data = await res.json();
